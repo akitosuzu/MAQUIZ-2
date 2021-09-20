@@ -113,3 +113,55 @@ if yes_no_answer == 0:
 
 #lists
 difficulty_levels = ["1","2","3"]
+
+
+
+
+#Tutorial
+
+
+      
+      
+
+#Variables - Difficulty Of Questions
+difficulty_levels = num_checker("What level of difficulty would you like to play? 1/2/3: ", 1, 3)
+time.sleep(1)
+print(" ")
+
+
+#Amt of questions
+
+#Questions & Answer Checkingto
+
+#Gameplay
+print(" ")
+statement_generator("LEVEL {} QUESTIONS".format(difficulty_levels), "-")
+print(" ")
+
+while True:
+  try:
+    question_creator()
+    user_answer = int(input("what is " + str(first_number) + " + " + str(second_number) + "? " ))
+    if user_answer == 000:
+      end_of_game()
+      break
+      
+    if user_answer == first_number + second_number:
+      print(" ")
+      statement_generator("RIGHT ANSWER", "✔")
+      print(" ")
+      statement_generator("POINT +1", "-")
+      rounds_played += 1 
+      correct_answers += 1
+      points += 1 
+
+    elif user_answer != first_number + second_number:
+      print(" ")
+      statement_generator("WRONG ANSWER", "X")
+      print(" ")
+      statement_generator("POINT ADDED +0", "-")
+      rounds_played += 1 
+      wrong_answers += 1
+
+  except ValueError:
+    statement_generator("NUMBER ONLY PLEASE","!") 
