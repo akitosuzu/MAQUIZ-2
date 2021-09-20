@@ -88,3 +88,28 @@ def end_of_game():
   print(" ")
   time.sleep(0.5)
   print("THANKS FOR PLAYING")
+
+
+
+#Variable - User experience
+statement_generator("WELCOME TO MAQUIZ", "●")
+print(" ")
+time.sleep(1.5)
+input("PRESS ENTER TO START")
+time.sleep(1)
+print(" ")
+userexperience = yes_no("Have you played MaQuith before? (y/n):")
+print(" ")
+if yes_no_answer == 0:
+  print("Well then, here's INSTRUCTION")
+  print(" ")
+  input("- 1: pick a level from 1 - 3, each level has different difficulties. -")
+  input("- level 1: addition of 0 - 20 / level 2: addition of 25 - 45. / level 3: addition of 50 - 100. -")
+  input("- 2: and just solve the questions!! -")
+  input("- whenever you want to quit type '000' -")
+  print(" ")
+  time.sleep(1)
+
+
+#lists
+difficulty_levels = ["1","2","3"]
