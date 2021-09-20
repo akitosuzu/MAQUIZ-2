@@ -79,3 +79,12 @@ def num_checker(question, low, high):
             print(" ")
             statement_generator(error,"!")
             print(" ")
+
+def end_of_game():
+  statement_generator("Final Points: {}".format(points), "◌")
+  print(" ")
+  time.sleep(0.5)
+  statement_generator("rounds played: {}".format(rounds_played), "◌")
+  print(" ")
+  time.sleep(0.5)
+  print("THANKS FOR PLAYING")
